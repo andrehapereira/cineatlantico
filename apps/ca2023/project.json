@@ -2,7 +2,7 @@
   "name": "ca2023",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "cinetlantico",
+  "prefix": "cineatlantico",
   "sourceRoot": "apps/ca2023/src",
   "tags": [],
   "targets": {
@@ -16,7 +16,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/ca2023/tsconfig.app.json",
         "assets": ["apps/ca2023/src/favicon.ico", "apps/ca2023/src/assets"],
-        "styles": ["apps/ca2023/src/styles.scss"],
+        "styles": ["libs/shared/src/lib/ca-theme/main.scss"],
         "scripts": []
       },
       "configurations": {
@@ -68,7 +68,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/ca2023/**/*.ts", "apps/ca2023/**/*.html"]
+        "lintFilePatterns": ["apps\\ca2023/**/*.ts", "apps\\ca2023/**/*.html"]
       }
     },
     "test": {

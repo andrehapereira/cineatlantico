@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'cinetlantico-nx-welcome',
+  selector: 'cineatlantico-nx-welcome',
   standalone: true,
   imports: [CommonModule],
   template: `
