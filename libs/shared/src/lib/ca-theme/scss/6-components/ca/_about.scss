@@ -1,0 +1,18 @@
+cdm-about {
+    .about-container {
+        display: flex;
+        justify-content: center;
+        color: $white;
+        &__content {
+            font-size: $content-font-size;
+            &.first-paragraph-only {
+                > p:not(:nth-child(1)) {
+                    display: none;
+                }
+            }
+        }
+        &--content {
+            max-width: $content-width;
+        }
+    }
+}

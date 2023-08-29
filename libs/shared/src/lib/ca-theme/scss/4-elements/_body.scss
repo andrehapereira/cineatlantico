@@ -1,0 +1,46 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'barlow';
+    font-weight: 500;
+    // @include media-breakpoint-down(sm) {
+    //     font-size: 14px
+    // }
+}
+html {
+    // scroll-behavior: smooth;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+}
+body{
+    background-image: url("#{$path-images}/background.jpg"), url("#{$path-images}/background-extension.jpg");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, repeat;
+    background-position: left top, 0 -5px;
+    @include media-breakpoint-down(md) {
+        background-position: left $header-height, 0 -5px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: 600;
+}
+
+@each $heading, $size in $headings {
+    #{$heading} {
+        font-size: $size;
+    }
+    @include media-breakpoint-down(sm) {
+        #{$heading} {
+            font-size: $size / 1.5;
+        }
+    }
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.no-scroll {
+    overflow: hidden!important;
+}

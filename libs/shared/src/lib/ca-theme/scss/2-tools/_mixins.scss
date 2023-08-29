@@ -1,0 +1,51 @@
+@import 'bootstrap/scss/mixins';
+
+@mixin absolute-center() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin itemsPerRow($count, $separatedby: .5) {
+    margin: #{$separatedby}rem;
+    width: calc((100% / $count) - (#{$separatedby}rem * 2));
+}
+
+@mixin gradient-background-animate($color, $text-color: white) {
+    background: linear-gradient(-45deg, transparent, transparent, $color, $color);
+    color: $text-color;
+    background-size: 800% 800%;
+    animation: gradient 1s ease;
+}
+
+@mixin gradient-background-animate-infinite($color, $text-color: white) {
+    background: linear-gradient(-45deg, transparent, $color, transparent, $color);
+    color: $text-color;
+    background-size: 800% 800%;
+    animation: gradient-loop 10s ease infinite;
+}
+
+
+@keyframes gradient {
+	0% {
+        background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
+@keyframes gradient-loop {
+	0% {
+    
+        background-position: 100% 50%;
+	}
+	50% {
+        background-position: 0% 0%;
+	}
+    100% {
+        background-position: 100% 50%;
+    }
+}

@@ -1,0 +1,62 @@
+.organization-and-partnerships {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 2rem;
+    &__container {
+        width: 100%;
+        max-width: $content-width;
+        .logo__containers {
+            @include media-breakpoint-down(sm) {
+                flex-wrap: wrap;
+            }
+            > div {
+                margin-top: 1rem;
+            }
+            &--title {
+                font-size: .75rem;
+                color: $text-color;
+                border-bottom: 2px solid $text-color;
+            }
+        }
+        .gap-4 {
+            gap: 2rem;
+        }
+        @include media-breakpoint-down(lg) {
+            &--wrapper {
+                flex-wrap: wrap;
+                &.justify-content-between {
+                    justify-content: flex-start!important;
+                }
+            }
+        }
+       
+        @include media-breakpoint-up(lg) {
+            &--organization {
+                max-width: 6.75%;
+                width: 100%;
+            }
+            &--colabs {
+                max-width: 9.677%;
+                width: 100%;
+            }
+            &--supporters {
+                max-width: 37.92%;
+                width: 100%;
+                
+            }
+            &--sponsors {
+                max-width: 24.917%;
+                width: 100%;
+            }
+        }
+        &--supporters, &--sponsors {
+            .logo__containers > div {
+                margin-right: 1rem;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.dashboard {
+    &__container { 
+        overflow:hidden;     
+        .empty-block {
+            $aspect-ratio: (100 * 8.5 / 16) * 1%;
+            width: 100%;
+            aspect-ratio: 16/8.5;
+            padding-top: $aspect-ratio;
+            @include media-breakpoint-down(md) {
+                $aspect-ratio: (100 * 12 / 16) * 1%;
+                aspect-ratio: 16/12;
+                padding-top: $aspect-ratio;
+
+            }
+        }
+        .event-poster-container {
+            max-width: $content-width;
+        }
+        .event-poster {
+            border-radius: $content-border-radius;
+        }
+        .event-poster-background {
+            $padding-top: (100 * 5 / 16) * 1%;
+            position: absolute;
+            top: $padding-top;
+            height: 100%;
+            width: 300%;
+            margin-left: -100%;
+            z-index: -1;
+        }
+        .empty-block-poster {
+            $padding-top: (100 * 1 / 16) * 1%;
+            aspect-ratio: 16/1;
+            width: 100%;
+            padding-top: $padding-top; 
+        }
+        .video-background {
+            $padding-top: (100 * 5 / 16) * 1%;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 300%;
+            margin-left: -100%;
+            z-index: -2;
+            background-color: $white;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.footer-container {
+    background-color: $secondary;
+    height: 300px;
+    color: $white;
+    // &__socials {
+    //     align-self: flex-start;
+    //     &--title {
+    //         color: $footer-text-color;
+    //         font-size: $social-networks-title;
+    //         font-weight: 500;
+    //     }
+    //     &--item {
+    //         a {
+    //             font-size: $social-networks-size;
+    //             color: $footer-text-color;
+    //             text-decoration: none;
+    //             font-weight: 600;
+    //         }
+    //     }
+    // }
+    &__content-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__content {
+        display: flex;
+        &__column {
+            display: flex;
+            flex-grow: 1;
+            &.space-between {
+                justify-content: space-between;
+            }
+        }
+        &--contacts {
+           div:not(.title) {
+            font-weight: 400;
+           } 
+        }
+        &--socials {
+            margin-left: auto;
+        }
+    }
+}

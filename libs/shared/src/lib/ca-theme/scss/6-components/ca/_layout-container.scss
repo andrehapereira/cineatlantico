@@ -1,0 +1,10 @@
+.layout {
+    &__container {
+         &--main-area {
+            width: 100%;
+            transition: $menu-transition;
+            scroll-behavior: smooth;
+        }
+    }
+}
+

@@ -1,0 +1,53 @@
+.cursor--pointer {
+    cursor: pointer;
+}
+
+.sample-image-background {
+    background-color: $sample-image-color;
+}
+
+.min-h-500 {
+    min-height: 500px;
+}
+
+.max-w-500 {
+    max-width: 500px;
+}
+
+.grow-on-hover:hover {
+    transition: ease-in-out .5s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.animate-on-hover:hover {
+    animation: ease-in-out animeHover .5s;
+    cursor: pointer;
+    //transform:  scaleY(.5);
+
+}
+
+@keyframes animeHover {
+    0% {
+        transform: rotate(0deg) scaleX(1);
+    }
+    10% {
+        transform: rotate(-5deg) scaleX(.9);
+    }
+    30% {
+        transform: rotate(5deg) scaleX(1.1);
+    }
+    50% {
+        transform: rotate(-10deg) scaleX(.9);
+    }
+    70% {
+        transform: rotate(10deg) scaleX(1.1);
+    }
+    90% {
+        transform: rotate(-5deg) scaleX(.9);
+    }
+    100% {
+        transform: rotate(0deg) scaleX(1);
+    }
+
+}

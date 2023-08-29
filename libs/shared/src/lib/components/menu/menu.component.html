@@ -1,0 +1,41 @@
+<div class="menu-container d-flex w-100 justify-content-between align-items-center px-4"
+    [ngClass]="{ 'bg-white': isMobile$ | async, 'menu-primary' : !isRouteActive('')}">
+    <div [routerLink]="'/'" class="logo__container cursor--pointer" >
+        <img src="assets/images/logo-ca.svg"alt="Cine Atlântico" class="w-100">
+    </div>
+    <div class="d-flex align-items-center">
+        <div class="desktop-menu d-flex" *ngIf="!(isMobile$ | async); else mobileMenu">
+            <div class="desktop-menu--menu-item mx-2 cursor--pointer" *ngFor="let config of menuConfig">
+                <div routerLinkActive="active-link" (isActiveChange)="onActivate($event, config)" [routerLink]="config.route" class="{{getSwipeInClass(config.route)}} {{getSwipeOutClass(config.route)}}"> {{config.label}} </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #mobileMenu>
+    <div class="menu-btn">
+        <div class="d-flex align-items-center cursor--pointer" (click)="toggleMenu()">
+            <div class="menu-btn__container" [ngClass]="(isMenuOpen$ | async) ? 'open-menu' : 'collapsed-menu'">
+                <div class="menu-btn__container--line"></div>
+                <div class="menu-btn__container--line"></div>
+                <div class="menu-btn__container--line"></div>
+            </div>
+            <div class="menu-btn__title"> {{ (isMenuOpen$ | async) ? 'FECHAR' : 'MENU'}} </div>
+        </div>
+    </div>
+    <div class="mobile-menu" [ngClass]="{ 'open-menu': isMenuOpen$ | async }">
+        <div class="mobile-menu--menu bg-white">
+
+            <div class="mobile-menu--menu-item d-flex w-100 justify-content-end py-1" *ngFor="let config of menuConfig">
+                <div routerLinkActive="active-link" [routerLink]="config.route"> {{config.label}} </div>
+            </div>
+           
+            <div class="social-networks--content mt-5 pt-5 d-flex justify-content-end">
+                <div class="me-3"><a href="https://www.facebook.com/cineclubeilhaterceira" target="_blank"><img
+                            src="assets/images/facebook-p.svg" alt="Facebook"></a></div>
+                <div><a href="https://www.instagram.com/cineclubedailhaterceira" target="_blank"><img
+                            src="assets/images/instagram-p.svg" alt="Instagram"></a></div>
+            </div>
+        </div>
+    </div>
+</ng-template>
