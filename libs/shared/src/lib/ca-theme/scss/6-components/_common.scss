@@ -1,5 +1,14 @@
-.cursor--pointer {
-    cursor: pointer;
+.cursor { 
+    &--pointer {
+        cursor: pointer;
+    }
+    &--not-allowed {
+        cursor: not-allowed
+    }
+}
+
+.grow {
+    flex-grow: 1;
 }
 
 .sample-image-background {
@@ -49,5 +58,26 @@
     100% {
         transform: rotate(0deg) scaleX(1);
     }
+}
 
+.three-per-row {
+    > * {
+        @include itemsPerRow(3, 1);
+        @include media-breakpoint-down(md) {
+            @include itemsPerRow(2, .5);
+        }
+        @include media-breakpoint-down(sm) {
+            @include itemsPerRow(1, .5);
+        }
+    }
+}
+
+.btn-back {
+    border-radius: 100px;
+    width: 34px;
+    height: 34px;
+    padding: 0!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

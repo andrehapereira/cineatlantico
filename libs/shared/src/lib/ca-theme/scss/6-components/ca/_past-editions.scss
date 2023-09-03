@@ -1,0 +1,50 @@
+.editions-container {
+    .poster {
+        position: relative;
+
+        &:hover {
+
+            &:before, &:after {
+                opacity: 1;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            background: rgba($white, .8);
+            z-index: 2;
+            transition: ease-in-out .5s;
+        }
+
+        &:after {
+            content: "Abrir";
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            font-size: 1rem;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            transition: ease-in .25s;
+            transition-delay: .25s;
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        &.no-website {
+            &:after {
+                content: "Sem website disponível"
+            }
+        }
+
+    }
+
+}

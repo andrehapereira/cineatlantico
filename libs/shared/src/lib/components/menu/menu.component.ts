@@ -28,6 +28,11 @@ export class MenuComponent {
 
   onActivate(isActive: boolean, menuItem: MenuItem) {
     isActive ? this._currentActive = menuItem : this._previousActive = menuItem;
+    if (!isActive && this.router.url === '/') {
+      setTimeout(() => {
+        this._previousActive = null;
+      },500)
+    }
   }
 
   toggleMenu() {

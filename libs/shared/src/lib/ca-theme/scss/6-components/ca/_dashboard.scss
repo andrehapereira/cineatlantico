@@ -1,14 +1,15 @@
 .dashboard {
     &__container { 
+        min-height: $content-min-height;
         overflow:hidden;     
         .empty-block {
-            $aspect-ratio: (100 * 8.5 / 16) * 1%;
+            $aspect-ratio: (100 * 7 / 16) * 1%;
             width: 100%;
-            aspect-ratio: 16/8.5;
+            aspect-ratio: 16/7;
             padding-top: $aspect-ratio;
             @include media-breakpoint-down(md) {
-                $aspect-ratio: (100 * 12 / 16) * 1%;
-                aspect-ratio: 16/12;
+                $aspect-ratio: (100 * 10 / 16) * 1%;
+                aspect-ratio: 16/10;
                 padding-top: $aspect-ratio;
 
             }
@@ -20,9 +21,12 @@
             border-radius: $content-border-radius;
         }
         .event-poster-background {
-            $padding-top: (100 * 5 / 16) * 1%;
+            $padding-top: (100 * 3 / 16) * 1%;
             position: absolute;
-            top: $padding-top;
+            top: 15rem;
+            @include media-breakpoint-down(sm) {
+                top: 8rem;
+            }
             height: 100%;
             width: 300%;
             margin-left: -100%;
@@ -37,8 +41,8 @@
         .video-background {
             $padding-top: (100 * 5 / 16) * 1%;
             position: absolute;
-            top: 0;
-            height: 100%;
+            top: -2rem;
+            height: 1000%;
             width: 300%;
             margin-left: -100%;
             z-index: -2;

@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 
-import { LayoutContainerComponent, MenuComponent } from '@cineatlantico/shared';
+import { LayoutContainerComponent } from '@cineatlantico/shared';
+import { AMostraComponent, ConvidadosComponent, DashboardComponent, EdicoesAnterioresComponent, ProgramaComponent, ProgramaDetailsComponent } from '@cineatlantico/ca2023-components';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 export const appRoutes: Route[] = [
@@ -10,23 +11,27 @@ export const appRoutes: Route[] = [
         children: [
             {
                 path: '',
-                component: NxWelcomeComponent,
+                component: DashboardComponent,
             },
             {
                 path: 'a-mostra',
-                component: NxWelcomeComponent
+                component: AMostraComponent
             },
             {
                 path: 'programa',
-                component: NxWelcomeComponent
+                component: ProgramaComponent
+            },
+            {
+                path: 'programa/:id',
+                component: ProgramaDetailsComponent
             },
             {
                 path: 'convidados',
-                component: NxWelcomeComponent
+                component: ConvidadosComponent
             },
             {
                 path: 'edicoes',
-                component: NxWelcomeComponent
+                component: EdicoesAnterioresComponent
             },
             {
                 path: '**',

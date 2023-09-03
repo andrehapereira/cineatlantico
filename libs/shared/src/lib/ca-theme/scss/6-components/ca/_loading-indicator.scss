@@ -1,0 +1,287 @@
+/* HTML: <div class="loader"></div> */
+:root {
+    --dot-one: #66BC45;
+    --dot-two: #BA519F;
+    --dot-three: #5456A5;
+    --dot-four: #302F80;
+    --dot-five: #66BC45;
+    --dot-six: #BA519F;
+    --dot-seven: #5456A5;
+    --dot-eight: #BA519F;
+    --dot-nine: #302F80;
+}
+.loader {
+    width: 4px;
+    color: #000;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 
+      19px -19px 0 0px var(--dot-one), 38px -19px 0 0px var(--dot-two), 57px -19px 0 0px var(--dot-three),
+      19px 0     0 5px var(--dot-four), 38px 0     0 5px var(--dot-five), 57px 0     0 5px var(--dot-six),
+      19px 19px  0 0px var(--dot-seven), 38px 19px  0 0px var(--dot-eight), 57px 19px  0 0px var(--dot-nine);
+    transform: translateX(-38px);
+    animation: l26 2s infinite linear;
+  }
+  @keyframes l26 {
+    12.5% {box-shadow: 
+      19px -19px 0 0px var(--dot-one), 38px -19px 0 0px var(--dot-two), 57px -19px 0 5px var(--dot-three),
+      19px 0     0 5px var(--dot-four), 38px 0     0 0px var(--dot-five), 57px 0     0 5px var(--dot-six),
+      19px 19px  0 0px var(--dot-seven), 38px 19px  0 0px var(--dot-eight), 57px 19px  0 0px}
+    25%   {box-shadow: 
+      19px -19px 0 5px var(--dot-one), 38px -19px 0 0px var(--dot-two), 57px -19px 0 5px var(--dot-three),
+      19px 0     0 0px var(--dot-four), 38px 0     0 0px var(--dot-five), 57px 0     0 0px var(--dot-six),
+      19px 19px  0 0px var(--dot-seven), 38px 19px  0 5px var(--dot-eight), 57px 19px  0 0px var(--dot-nine)}
+    50%   {box-shadow: 
+      19px -19px 0 5px var(--dot-one), 38px -19px 0 5px var(--dot-two), 57px -19px 0 0px var(--dot-three),
+      19px 0     0 0px var(--dot-four), 38px 0     0 0px var(--dot-five), 57px 0     0 0px var(--dot-six),
+      19px 19px  0 0px var(--dot-seven), 38px 19px  0 0px var(--dot-eight), 57px 19px  0 5px var(--dot-nine)}
+    62.5% {box-shadow: 
+      19px -19px 0 0px var(--dot-one), 38px -19px 0 0px var(--dot-two), 57px -19px 0 0px var(--dot-three),
+      19px 0     0 5px var(--dot-four), 38px 0     0 0px var(--dot-five), 57px 0     0 0px var(--dot-six),
+      19px 19px  0 0px var(--dot-seven), 38px 19px  0 5px var(--dot-eight), 57px 19px  0 5px var(--dot-nine)}
+    75%   {box-shadow: 
+      19px -19px 0 0px var(--dot-one), 38px -19px 0 5px var(--dot-two), 57px -19px 0 0px var(--dot-three),
+      19px 0     0 0px var(--dot-four), 38px 0     0 0px var(--dot-five), 57px 0     0 5px var(--dot-six),
+      19px 19px  0 0px var(--dot-seven), 38px 19px  0 0px var(--dot-eight), 57px 19px  0 5px var(--dot-nine)}
+    87.5% {box-shadow: 
+      19px -19px 0 0px var(--dot-one), 38px -19px 0 5px var(--dot-two), 57px -19px 0 0px var(--dot-three),
+      19px 0     0 0px var(--dot-four), 38px 0     0 5px var(--dot-five), 57px 0     0 0px var(--dot-six),
+      19px 19px  0 5px var(--dot-seven), 38px 19px  0 0px var(--dot-eight), 57px 19px  0 0px var(--dot-nine)}
+  }
+
+  #camera-body,
+#reel-1,
+#reel-2 {
+	fill: $success;
+	fill-opacity: 0.95;
+	stroke: none;
+}
+
+#camera-body {
+  animation: ease-in-out cameraBodyAnim 1s infinite;
+}
+ 
+@keyframes cameraBodyAnim {
+  0%, 12.5% {
+    fill: $primary
+  }
+  12.5%, 37.5% {
+    fill: $secondary;
+  }
+  37.5%, 62.5% {
+    fill: $info;
+  }
+  62.5%, 87.5% {
+    fill: $secondary;
+  }
+  87.5%, 100% {
+    fill: $primary
+  }
+}
+
+@keyframes lightAnim {
+  0%, 12.5% {
+    border-right-color: rgba($primary, .2);
+  }
+  12.5%, 37.5% {
+    border-right-color: rgba($secondary, .2);
+  }
+  37.5%, 62.5% {
+    border-right-color: rgba($info, .2);
+  }
+  62.5%, 87.5% {
+    border-right-color: rgba($secondary, .2);
+  }
+  87.5%, 100% {
+    border-right-color: rgba($primary, .2);
+  }
+}
+
+.loading-indicator {
+  @media only screen and (max-width: 615px) {
+    transform: translate(-125px);
+  }
+  @media only screen and (max-width: 350px) {
+    transform: translate(0px);
+    .reel-light {
+      display: none;
+    }
+  }
+}
+
+
+.reel-light {
+  // background: $primary;
+  // width: 100px;
+  // height: 25px;
+  // top:0;
+  // right: -100%;
+  // border-top-left-radius: 100%;
+  // border-bottom-left-radius: 100%;
+  border-right: 250px solid $primary;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  height: 100px;
+  width: 0px;
+  top: -28px;
+  right: -248px;
+  transform: rotate(-7deg);
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  animation: ease-in-out lightAnim 1s infinite; 
+  svg {
+    top: -12px;
+    right: -240px;
+    position: absolute;
+    transform: scale(.6);
+    transform: translateX(0px) perspective(155px) rotateY(-58deg);
+    transform-style: preserve-3d;
+    path:nth-child(1) {
+      animation: ease-in-out Path1 5s infinite;
+    }
+    path:nth-child(2) {
+      animation: ease-in-out Path2 5s infinite;
+    }
+    path:nth-child(3) {
+      animation: ease-in-out Path3 5s infinite;
+    }
+    path:nth-child(4) {
+      animation: ease-in-out Path4 5s infinite;
+    }
+    path:nth-child(5) {
+      animation: ease-in-out Path5 5s infinite;
+    }
+    path:nth-child(6) {
+      animation: ease-in-out Path6 5s infinite;
+    }
+    path:nth-child(7) {
+      animation: ease-in-out Path7 5s infinite;
+    }
+    path:nth-child(8) {
+      animation: ease-in-out Path8 5s infinite;
+    }
+    path:nth-child(9) {
+      animation: ease-in-out Path9 5s infinite;
+    }
+    path:nth-child(10) {
+      animation: ease-in-out Path10 5s infinite;
+    }
+    path:nth-child(11) {
+      animation: ease-in-out Path11 5s infinite;
+    }
+    path:nth-child(12) {
+      animation: ease-in-out Path12 5s infinite;
+    }
+    path:nth-child(13) {
+      animation: ease-in-out Path13 5s infinite;
+    }
+    path:nth-child(14) {
+      animation: ease-in-out Path8 5s infinite;
+    }
+  }
+}
+
+@keyframes Path1 {
+  0% {
+    opacity: 0;
+  }
+  5%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path2 {
+  0%,5% {
+    opacity: 0;
+  }
+  10%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path3 {
+  0%,10% {
+    opacity: 0;
+  }
+  15%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path4 {
+  0%,15% {
+    opacity: 0;
+  }
+  20%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path5 {
+  0%,20% {
+    opacity: 0;
+  }
+  25%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path6 {
+  0%,25% {
+    opacity: 0;
+  }
+  30%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path7 {
+  0%,30% {
+    opacity: 0;
+  }
+  35%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path8 {
+  0%,35% {
+    opacity: 0;
+  }
+  40%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path9 {
+  0%,40% {
+    opacity: 0;
+  }
+  45%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path10 {
+  0%,45% {
+    opacity: 0;
+  }
+  50%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path11 {
+  0%,50% {
+    opacity: 0;
+  }
+  55%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path12 {
+  0%,55% {
+    opacity: 0;
+  }
+  60%, 100%{
+    opacity: 1;
+  }
+}
+@keyframes Path13 {
+  0%,60% {
+    opacity: 0;
+  }
+  65%, 100%{
+    opacity: 1;
+  }
+}

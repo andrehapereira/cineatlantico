@@ -1,7 +1,7 @@
 <div class="menu-container d-flex w-100 justify-content-between align-items-center px-4"
     [ngClass]="{ 'bg-white': isMobile$ | async, 'menu-primary' : !isRouteActive('')}">
     <div [routerLink]="'/'" class="logo__container cursor--pointer" >
-        <img src="assets/images/logo-ca.svg"alt="Cine Atlântico" class="w-100">
+        <img src="assets/images/{{ isRouteActive('') ? 'logo-ca' : 'logo-ca-white'}}.svg"alt="Cine Atlântico" class="w-100">
     </div>
     <div class="d-flex align-items-center">
         <div class="desktop-menu d-flex" *ngIf="!(isMobile$ | async); else mobileMenu">
@@ -32,9 +32,9 @@
            
             <div class="social-networks--content mt-5 pt-5 d-flex justify-content-end">
                 <div class="me-3"><a href="https://www.facebook.com/cineclubeilhaterceira" target="_blank"><img
-                            src="assets/images/facebook-p.svg" alt="Facebook"></a></div>
+                            src="assets/images/{{ isRouteActive('') ? 'facebook-primary' : 'facebook'}}.svg" alt="Facebook"></a></div>
                 <div><a href="https://www.instagram.com/cineclubedailhaterceira" target="_blank"><img
-                            src="assets/images/instagram-p.svg" alt="Instagram"></a></div>
+                            src="assets/images/{{ isRouteActive('') ? 'instagram-primary' : 'instagram'}}.svg" alt="Instagram"></a></div>
             </div>
         </div>
     </div>

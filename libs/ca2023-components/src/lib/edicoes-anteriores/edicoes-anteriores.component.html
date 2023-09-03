@@ -1,0 +1,13 @@
+<cineatlantico-page-container>
+    <cineatlantico-page-heading heading="EDIÇÕES ANTERIORES"></cineatlantico-page-heading>
+    <div data class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap">
+        <ng-container *ngFor="let edition of editions">
+            <div class="editions-container event-card">
+                <div class="poster event-card__image" [ngClass]="!hasWebsite(edition) ? 'no-website cursor--not-allowed' : 'cursor--pointer'" (click)="open(edition)">
+                    <img class="w-100" src="assets/images/past-editions/{{edition}}.jpg"
+                        alt="Edição {{edition}}"></div>
+                <h1 class="year mt-3">{{edition}}</h1>
+            </div>
+        </ng-container>
+    </div>
+</cineatlantico-page-container>

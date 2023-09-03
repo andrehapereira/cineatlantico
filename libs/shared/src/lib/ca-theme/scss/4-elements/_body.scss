@@ -3,14 +3,15 @@ html, body {
     height: 100%;
     font-family: 'barlow';
     font-weight: 500;
+    color: $text-color;
     // @include media-breakpoint-down(sm) {
     //     font-size: 14px
     // }
 }
 html {
-    // scroll-behavior: smooth;
-    // overflow-y: auto;
-    // overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 body{
     background-image: url("#{$path-images}/background.jpg"), url("#{$path-images}/background-extension.jpg");

@@ -1,44 +1,76 @@
 .footer-container {
-    background-color: $secondary;
-    height: 300px;
+    background-color: $primary;
+    min-height: $footer-logo-min-height;
     color: $white;
-    // &__socials {
-    //     align-self: flex-start;
-    //     &--title {
-    //         color: $footer-text-color;
-    //         font-size: $social-networks-title;
-    //         font-weight: 500;
-    //     }
-    //     &--item {
-    //         a {
-    //             font-size: $social-networks-size;
-    //             color: $footer-text-color;
-    //             text-decoration: none;
-    //             font-weight: 600;
-    //         }
-    //     }
-    // }
     &__content-wrapper {
         display: flex;
         width: 100%;
         justify-content: space-between;
+        max-width: $content-width;
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
     }
     &__content {
         display: flex;
-        &__column {
-            display: flex;
-            flex-grow: 1;
-            &.space-between {
-                justify-content: space-between;
+        justify-content: space-between;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+        @include media-breakpoint-down(sm) {
+            justify-content: center;
+        }
+        &.md-center {
+            @include media-breakpoint-down(lg) {
+                justify-content: center;
+            }
+        }
+        &--footer-logo {
+            max-width: $footer-logo-width;
+            min-width: $footer-logo-width;
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 1rem;
+                margin-right: 3.7rem;
             }
         }
         &--contacts {
+            margin-right: .5rem;
            div:not(.title) {
             font-weight: 400;
            } 
+           .email a {
+            color: $white;
+            text-decoration: none!important;
+           }
         }
         &--socials {
-            margin-left: auto;
+            margin: .8rem 1.5rem;
+        }
+        &--dossier {
+            button {
+                border-radius: 100px;
+                width: 200px;
+                height: 57px;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem 0 1.5rem;
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    font-weight: 600;
+                    color: $white;
+                    line-height: 15px;
+                }
+                .icon mat-icon {
+                    width:50px;
+                    height:50px;
+                    font-size:50px;
+                    color: $white;
+                }
+            }
         }
     }
 }

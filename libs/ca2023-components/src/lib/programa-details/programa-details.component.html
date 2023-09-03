@@ -1,0 +1,29 @@
+<cineatlantico-page-container>
+    <div heading>
+        <button class="btn btn-outline-secondary btn-back" routerLink="..">
+            <mat-icon fontSet="material-symbols-outlined">arrow_back</mat-icon>
+        </button>
+    </div>
+   <div data class="w-100 my-sm-5 my-3 details-container" *ngIf="event$ | async as event">
+        <div class="details-container__image mb-2">
+            <img #poster [src]="event.poster" [alt]="event.title" class="w-100"[ngStyle]="imgStyle$ | async" draggable="false"/>
+        </div>
+        <div class="details-container__content">
+            <div class="details-container__content--date">{{ event.date }}</div>
+            <h1 class="details-container__content--title">{{ event.title }}</h1>
+            <div class="content mt-3">
+                <div class="details-container__content--producer" *ngIf="event.producer" details-container__content--producer>De: {{event.producer}}</div>
+                <div class="details-container__content--cast" *ngIf="event.cast">Com: {{event.cast}}</div>
+                <div class="details-container__content--additional-info" *ngIf="event.additionalInformation">{{event.additionalInformation}}</div>
+            </div>
+            <div class="details-container__content--category" *ngIf="event.category"> {{event.category}} </div>
+            <div class="details-container__content--imdb" *ngIf="event.IMDBLink">
+                <a target="_blank" [href]="event.IMDBLink" (click)="$event.stopPropagation()">
+                    <div class="badge bg-success px-2 mt-3"> IMDB </div>
+                </a>
+            </div>
+            <div class="details-container__content--sinopse mt-3" *ngIf="event.sinopse" [innerHTML]="event.sinopse"></div>
+            <cineatlantico-video *ngIf="event.trailer" [embed]="event.trailer"></cineatlantico-video>
+        </div>
+    </div>
+</cineatlantico-page-container>

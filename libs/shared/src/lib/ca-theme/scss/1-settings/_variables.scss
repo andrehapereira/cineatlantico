@@ -7,6 +7,10 @@
 $header-height: 100px;
 $header-width: 500px;
 $content-width: 1200px;
+$footer-logo-width: 182px;
+$footer-logo-min-height: 300px;
+
+$content-min-height: calc(100vh - $footer-logo-min-height);
 
 $menu-transition: right .5s ease-in-out;
 

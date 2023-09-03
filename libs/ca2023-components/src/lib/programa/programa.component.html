@@ -1,0 +1,29 @@
+<cineatlantico-page-container>
+    <cineatlantico-page-heading heading="PROGRAMA"></cineatlantico-page-heading>
+    <div data class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap">
+        <ng-container *ngIf="!(loading$ | async); else loading">
+            <ng-container *ngFor="let event of events$ | async">
+                <cineatlantico-event-card
+                    [route]="event.id" 
+                    [eventPoster]="event.poster" 
+                    [eventTitle]="event.title" 
+                    [eventDate]="event.date"
+                    [producer]="event.producer"
+                    [cast]="event.cast"
+                    [additionalInfo]="event.additionalInformation"
+                    [category]="event.category"
+                    [IMDBLink]="event.IMDBLink"
+                >
+                </cineatlantico-event-card>
+            </ng-container>
+        </ng-container>
+
+    </div>
+</cineatlantico-page-container>
+
+<ng-template #loading>
+    <div class="d-flex w-100 justify-content-center align-items-center p-5 flex-column">
+        <cineatlantico-loading-indicator></cineatlantico-loading-indicator>
+        <span>A carregar...</span>
+    </div>
+</ng-template>

@@ -1,0 +1,9 @@
+.page-container {
+    background: $white;
+    min-height: $content-min-height;
+    &__content {
+        padding: 2rem;
+        padding-top: calc($header-height + 2rem);
+        max-width: $content-width;
+    }
+}

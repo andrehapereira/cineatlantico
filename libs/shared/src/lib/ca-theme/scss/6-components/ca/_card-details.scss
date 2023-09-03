@@ -1,0 +1,11 @@
+.details-container {
+    &__image {
+        max-height: 400px;
+        overflow: hidden;
+        aspect-ratio: 2.84/1;
+        border-radius: 16px;
+        img {
+            object-fit: cover;
+        }
+    }
+}

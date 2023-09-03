@@ -1,0 +1,21 @@
+<div class="tickets-container py-5">
+    <div class="tickets-container__content bg-primary p-4">
+        <div>
+            <h1 class="tickets--place"> {{ label }} </h1>
+        </div>
+        <div class="tickets-container__content--tickets">
+            <div class="ticket ticket-w">
+                <img *ngIf="normalTicketBG" [src]="normalTicketBG" alt="BILHETE NORMAL"/>
+                <div class="ticket--info">
+                    <span>BILHETE</span><span>NORMAL</span><span>{{ normalPrice }}</span>
+                </div>
+            </div>
+            <div class="ticket ticket-r">
+                <img *ngIf="partnerTicketBG" [src]="partnerTicketBG" alt="BILHETE SÓCIOS"/>
+                <div class="ticket--info">
+                    <span>BILHETE</span><span>SÓCIOS</span><span>{{ partnerPrice }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<div class="dashboard__container w-100">
+    <div class="empty-block"></div>
+    <div>
+        <div class="about-container">
+            <div class="p-4 about-container--content">
+                <div class="about-container__header d-flex w-100 justify-content-center">
+                    <h1 class="about-container__header--title">SOBRE A MOSTRA</h1>
+                </div>
+                <div class="about-container__content text-justify my-sm-5 my-3">
+                    <p> A pandemia da Covid-19 e, sobretudo, as limitações sanitárias a que todos fomos sujeitos,
+                        durante os dois confinamentos, criaram um contexto social, político, económico, cultural e
+                        existencial que teve muitas consequências nas nossas relações com os outros; e também,
+                        obviamente, na produção artística e, em particular, no processo de produção de filmes e no modo
+                        de vê-los pelos espectadores. É neste sentido que se configura o que se tem chamado um ‘novo
+                        normal’, que tem evoluído, pouco a pouco, para uma forma de viver que ainda está cheia de
+                        incertezas, inseguranças e questionamentos.
+                    </p>
+                    <p> Mais do que simplesmente fixar ou representar um retrato desta ou dessa época que vivemos –
+                        embora outros desafios se nos levantem, da guerra da Ucrânia à afirmação das plataformas de
+                        streaming, passando pela crise de espectadores nas salas de cinema –, o que se pretende nesta
+                        Mostra é apresentar uma selecção de filmes portugueses produzidos em 2021/22, representativos —
+                        independentemente das histórias se passarem na actualidade recente ou não — desse período; ou
+                        melhor, produzidos numa altura muito precisa, sujeitos a muitas limitações e realizados num
+                        contexto muito complicado, mas que, ao mesmo tempo, parecem traduzir um desafio criativo e
+                        invulgar para as suas equipas de produção, actores e realizadores que os fizeram.
+                    </p>
+                    <p> Atravessando uma pandemia e o necessário isolamento, as relações humanas acabam aqui sendo
+                        vistas nestes filmes, quase sempre com novos olhares: carência, saudade, medo, convivência…
+                        mergulhando-nos num mar de sensações e sentimentos que obviamente se reflectem nesta selecção de
+                        obras que vamos ver. E quando, no meio de tudo isto, muitas coisas são postas em causa?
+                    </p>
+                    <p> Bem-vindos ao cinema português pós-pandemia e a um conjunto de histórias, reais ou de ficção,
+                        feitas para as usufruirmos numa sala de cinema, e novamente no tão simbólico auditório da
+                        Sociedade Filarmónica de Instrução e Recreio dos Artistas, em pleno ‘novo normal’ ou num normal
+                        que não voltará a ser como era antes. Aí vai….
+                    </p>
+                    <div class="d-flex w-100 signature mt-5">José Vieira Mendes, 22/08/2022</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-relative p-4">
+        <div class="bg-info video-background"></div>
+        <cineatlantico-video [embed]="'https://www.youtube.com/embed/8SGhATwzjFw'"></cineatlantico-video>
+    </div>
+    <div class="p-4 d-flex flex-column align-items-center position-relative">
+        <div class="bg-white event-poster-background"></div>
+        <div class="position-relative event-poster-container">
+            <img src="assets/images/event-poster.jpg" alt="event poster" class="w-100 event-poster" draggable="false">
+        </div>
+        <cineatlantico-tickets class="w-100" normalTicketBG="assets/images/normal-ticket.svg"
+            partnerTicketBG="assets/images/partner-ticket.svg" normalPrice="€3,00" partnerPrice="€1,50"
+            label="BILHETES À VENDA NA RECREIO DOS ARTISTAS, ANTES DO INÍCIO DE CADA SESSÃO">
+        </cineatlantico-tickets>
+        <div class="organization-and-partnerships">
+            <div class="organization-and-partnerships__container pb-5">
+                <div
+                    class="d-flex w-100 gap-4 justify-content-between organization-and-partnerships__container--wrapper">
+                    <div class="d-flex flex-column organization-and-partnerships__container--organization">
+                        <div class="d-flex w-100 align-items-center logo__containers--title">
+                            <strong>ORGANIZAÇÃO</strong></div>
+                        <div class="d-flex align-items-center logo__containers">
+                            <div style="max-width: 81px; width: 100%;"><img class="w-100"
+                                    src="assets/images/logos/cine-clube.jpg" alt="cine-clube.jpg"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column organization-and-partnerships__container--supporters">
+                        <div class="d-flex w-100 align-items-center logo__containers--title"><strong>APOIOS</strong>
+                        </div>
+                        <div class="d-flex align-items-center logo__containers">
+                            <div style="max-width: 296px; width: 100%;"><img class="w-100"
+                                    src="assets/images/logos/gracores.png" alt="gracores.png"></div>
+                            <div style="max-width: 159px; width: 100%;"><img class="w-100"
+                                    src="assets/images/logos/cmah.png" alt="cmah.png"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column organization-and-partnerships__container--colabs">
+                        <div class="d-flex w-100 align-items-center logo__containers--title">
+                            <strong>COLABORAÇÃO</strong></div>
+                        <div class="d-flex align-items-center logo__containers">
+                            <div style="max-width: 120px; width: 100%;"><img class="w-100"
+                                    src="assets/images/logos/sfira.png" alt="sfira.png"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column organization-and-partnerships__container--sponsors">
+                        <div class="d-flex w-100 align-items-center logo__containers--title">
+                            <strong>PATROCÍNIOS</strong></div>
+                        <div class="d-flex align-items-center logo__containers">
+                            <div style="max-width: 89px; width: 100%;"><img class="w-100"
+                                    src="assets/images/logos/c-auto.png" alt="c-auto.png"></div>
+                            <div style="max-width: 210px; width: 100%;"><img class="w-100"
+                                    src="assets/images/logos/expert.png" alt="expert.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

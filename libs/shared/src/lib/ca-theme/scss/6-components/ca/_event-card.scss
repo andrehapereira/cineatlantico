@@ -1,0 +1,28 @@
+.event-card {
+    &__image {
+        border-radius: 16px;
+        overflow:hidden;
+        img {
+            border-radius: 16px;
+            aspect-ratio: 11.3/16;
+            object-fit: cover;
+            transition: transform ease-out .5s;
+        }
+    }
+    &:hover {
+        .event-card__image img {
+            transform: scale(1.05);
+            opacity: .9;
+        }
+    }
+}
+
+.event-card--squared {
+    .event-card {
+        &__image {
+            img {
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
