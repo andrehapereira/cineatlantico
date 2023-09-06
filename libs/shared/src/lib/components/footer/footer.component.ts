@@ -11,4 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class FooterComponent {
   @HostBinding() cls = 'mt-auto';
+
+  downloadDossier() {
+    window.open('assets/2023_dossier_imprensa_cine_atlantico.pdf', '_blank');
+  }
 }

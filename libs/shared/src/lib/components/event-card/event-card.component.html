@@ -2,14 +2,14 @@
     <div class="event-card__image">
         <img class="w-100" [src]="eventPoster" />
     </div>
-    <div class="date mt-3">{{ eventDate }}</div>
+    <div class="date mt-3"><strong>{{ eventDate }}</strong></div>
     <h1 class="title">{{ eventTitle }}</h1>
     <div class="content mt-3">
         <div *ngIf="producer">De: {{producer}}</div>
         <div *ngIf="cast">Com: {{cast}}</div>
         <div *ngIf="additionalInfo">{{additionalInfo}}</div>
     </div>
-    <div class="footer" *ngIf="category"> {{category}} </div>
+    <div class="footer" *ngIf="category"><strong>{{category}}</strong></div>
     <div class="imdb" *ngIf="IMDBLink">
         <a target="_blank" [href]="IMDBLink" (click)="$event.stopPropagation()">
             <div class="badge bg-success px-2 mt-3"> IMDB </div>

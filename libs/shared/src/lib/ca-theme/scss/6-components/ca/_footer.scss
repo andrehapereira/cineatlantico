@@ -37,11 +37,15 @@
         }
         &--contacts {
             margin-right: .5rem;
+            h3.title {
+                color: $success;
+            }
            div:not(.title) {
             font-weight: 400;
            } 
            .email a {
-            color: $white;
+            color: $success;
+            font-weight: 600;
             text-decoration: none!important;
            }
         }

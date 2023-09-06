@@ -27,7 +27,7 @@
         <div class="mobile-menu--menu bg-white">
 
             <div class="mobile-menu--menu-item d-flex w-100 justify-content-end py-1" *ngFor="let config of menuConfig">
-                <div routerLinkActive="active-link" [routerLink]="config.route"> {{config.label}} </div>
+                <div routerLinkActive="active-link" [routerLink]="config.route" (click)="toggleMenu()"> {{config.label}} </div>
             </div>
            
             <div class="social-networks--content mt-5 pt-5 d-flex justify-content-end">

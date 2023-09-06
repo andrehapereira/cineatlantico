@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "build": "nx build ca2023",
+    "build2023": "nx build ca2023",
     "start": "nx serve ca2023",
     "start2023": "nx serve ca2023"
   },
