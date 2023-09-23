@@ -3,14 +3,17 @@ import { CommonModule } from '@angular/common';
 import { EventCardComponent, LoadingIndicatorComponent, PageContainerComponent, PageHeadingComponent } from '@cineatlantico/shared';
 import { Store } from '@ngrx/store';
 import { GET_EVENTS, getEvents, isGettingEvents} from '@cineatlantico/app-state';
-import { BehaviorSubject, combineLatest, filter, map, take, tap, timer } from 'rxjs';
+import { BehaviorSubject, combineLatest, filter, map, take, timer } from 'rxjs';
+import { staggerChildrenTag } from '@cineatlantico/animations';
 
 @Component({
   selector: 'cineatlantico-programa',
   standalone: true,
   imports: [CommonModule, PageHeadingComponent, PageContainerComponent, EventCardComponent, LoadingIndicatorComponent],
   templateUrl: './programa.component.html',
-  styles: [],
+  animations: [
+    staggerChildrenTag('cineatlantico-event-card', 'translateY(50%)')
+  ],
 })
 export class ProgramaComponent {
 
@@ -23,7 +26,7 @@ export class ProgramaComponent {
   loading$ = combineLatest([
     this.store.select(isGettingEvents), 
     this.loadingBG$.asObservable()
-  ]).pipe(tap(console.log),map(([loading, loadingBG]) => loading || loadingBG));
+  ]).pipe(map(([loading, loadingBG]) => loading || loadingBG));
 
   ngOnInit() {
     this.store.dispatch(GET_EVENTS());
@@ -40,7 +43,7 @@ export class ProgramaComponent {
   }
 
   private preloadImage(image: string) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, _) => {
       const img = document.createElement('img');
       img.onload = () => {
         resolve(true);

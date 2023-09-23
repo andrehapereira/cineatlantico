@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageContainerComponent, PageHeadingComponent } from '@cineatlantico/shared';
+import { staggerChildrenTag } from '@cineatlantico/animations';
 
 @Component({
   selector: 'cineatlantico-edicoes-anteriores',
   standalone: true,
   imports: [CommonModule, PageContainerComponent, PageHeadingComponent],
   templateUrl: './edicoes-anteriores.component.html',
-  styles: [],
+  animations: [
+    staggerChildrenTag('.editions-container', 'translateY(50%)')
+  ],
 })
 export class EdicoesAnterioresComponent {
   editions = ['2016', '2017', '2018', '2019', '2020', '2021', '2022'];

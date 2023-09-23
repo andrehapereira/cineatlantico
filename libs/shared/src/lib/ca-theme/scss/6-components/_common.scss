@@ -81,3 +81,134 @@
     align-items: center;
     justify-content: center;
 }
+
+@keyframes showBg {
+    0%, 80% {
+        opacity: 1;
+        background: none;
+    }
+    81% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        background: url("#{$path-images}/retratos_de_familia.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@keyframes hideAll {
+    0%, 80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Path1 {
+    0% {
+      opacity: 0;
+    }
+    5%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path2 {
+    0%,5% {
+      opacity: 0;
+    }
+    10%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path3 {
+    0%,10% {
+      opacity: 0;
+    }
+    15%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path4 {
+    0%,15% {
+      opacity: 0;
+    }
+    20%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path5 {
+    0%,20% {
+      opacity: 0;
+    }
+    25%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path6 {
+    0%,25% {
+      opacity: 0;
+    }
+    30%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path7 {
+    0%,30% {
+      opacity: 0;
+    }
+    35%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path8 {
+    0%,35% {
+      opacity: 0;
+    }
+    40%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path9 {
+    0%,40% {
+      opacity: 0;
+    }
+    45%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path10 {
+    0%,45% {
+      opacity: 0;
+    }
+    50%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path11 {
+    0%,50% {
+      opacity: 0;
+    }
+    55%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path12 {
+    0%,55% {
+      opacity: 0;
+    }
+    60%, 100%{
+      opacity: 1;
+    }
+  }
+  @keyframes Path13 {
+    0%,60% {
+      opacity: 0;
+    }
+    65%, 100%{
+      opacity: 1;
+    }
+  }

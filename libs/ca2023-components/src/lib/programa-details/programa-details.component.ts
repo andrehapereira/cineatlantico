@@ -1,18 +1,21 @@
-import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageContainerComponent, PageHeadingComponent, VideoComponent } from '@cineatlantico/shared';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { delay, distinctUntilChanged, map, switchMap, tap } from 'rxjs';
+import { map, switchMap, tap } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { GET_EVENT_BY_ID, getEventById, gettingEventsError } from '@cineatlantico/app-state';
+import { staggerChildrenTag } from '@cineatlantico/animations';
 
 @Component({
   selector: 'cineatlantico-programa-details',
   standalone: true,
   imports: [CommonModule, RouterModule, PageContainerComponent, PageHeadingComponent, MatIconModule, VideoComponent],
   templateUrl: './programa-details.component.html',
-  styles: [],
+  animations: [
+    staggerChildrenTag('div', 'translateX(-50%)', 50)
+  ]
 })
 export class ProgramaDetailsComponent implements OnInit {
 

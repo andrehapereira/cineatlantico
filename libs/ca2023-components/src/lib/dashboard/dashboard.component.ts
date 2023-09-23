@@ -7,6 +7,5 @@ import { TicketsComponent, VideoComponent } from '@cineatlantico/shared';
   standalone: true,
   imports: [CommonModule, VideoComponent, TicketsComponent],
   templateUrl: './dashboard.component.html',
-  styles: [],
 })
 export class DashboardComponent {}

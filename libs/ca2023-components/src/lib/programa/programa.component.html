@@ -1,9 +1,10 @@
 <cineatlantico-page-container>
     <cineatlantico-page-heading heading="PROGRAMA"></cineatlantico-page-heading>
-    <div data class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap">
+    <div data>
         <ng-container *ngIf="!(loading$ | async); else loading">
-            <ng-container *ngFor="let event of events$ | async">
+            <div class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap" @staggerChildren>
                 <cineatlantico-event-card
+                    *ngFor="let event of events$ | async as events"
                     [route]="event.id" 
                     [eventPoster]="event.poster" 
                     [eventTitle]="event.title" 
@@ -15,10 +16,10 @@
                     [IMDBLink]="event.IMDBLink"
                 >
                 </cineatlantico-event-card>
+            </div>
             </ng-container>
-        </ng-container>
-
-    </div>
+                
+            </div>
 </cineatlantico-page-container>
 
 <ng-template #loading>

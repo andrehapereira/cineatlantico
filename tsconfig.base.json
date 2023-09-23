@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@cineatlantico/animations": ["libs/animations/src/index.ts"],
       "@cineatlantico/app-state": ["libs/app-state/src/index.ts"],
       "@cineatlantico/ca2023-components": [
         "libs/ca2023-components/src/index.ts"

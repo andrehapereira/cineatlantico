@@ -4,7 +4,7 @@
             <mat-icon fontSet="material-symbols-outlined">arrow_back</mat-icon>
         </button>
     </div>
-   <div data class="w-100 my-sm-5 my-3 details-container" *ngIf="event$ | async as event">
+   <div data class="w-100 my-sm-5 my-3 details-container" *ngIf="event$ | async as event" @staggerChildren>
         <div class="details-container__image mb-2">
             <img #poster [src]="event.poster" [alt]="event.title" class="w-100"[ngStyle]="imgStyle$ | async" draggable="false"/>
         </div>

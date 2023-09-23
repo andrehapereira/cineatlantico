@@ -1,20 +1,15 @@
 <cineatlantico-page-container>
     <cineatlantico-page-heading heading="CONVIDADOS"></cineatlantico-page-heading>
-    <div data class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap event-card--squared">
-        <!-- <ng-container *ngIf="!(loading$ | async); else loading">
-            <ng-container *ngFor="let event of events$ | async"> -->
-                <cineatlantico-event-card
-                    [eventPoster]="poster" 
-                    [eventTitle]="title" 
-                    [eventDate]="date"
-                    [additionalInfo]="info"
-                    [IMDBLink]="IMDB"
-                    [clickable]="false"
-                >
-                </cineatlantico-event-card>
-            <!-- </ng-container>
-        </ng-container> -->
-
+    <div data class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap event-card--squared" @staggerChildren>
+        <cineatlantico-event-card
+            [eventPoster]="poster" 
+            [eventTitle]="title" 
+            [eventDate]="date"
+            [additionalInfo]="info"
+            [IMDBLink]="IMDB"
+            [clickable]="false"
+        >
+        </cineatlantico-event-card>
     </div>
 </cineatlantico-page-container>
 

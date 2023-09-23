@@ -1,13 +1,13 @@
 import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { trigger, state, style, transition, query, stagger, animate } from '@angular/animations';
 
 @Component({
   selector: 'cineatlantico-event-card',
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './event-card.component.html',
-  styles: [],
 })
 export class EventCardComponent {
 

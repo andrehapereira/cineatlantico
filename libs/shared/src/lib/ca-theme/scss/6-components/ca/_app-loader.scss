@@ -1,0 +1,79 @@
+$pathTimeout: 1s;
+$svgHideTimeout: 2s;
+$showBgTimeout: 2.5s;
+
+.app-loader {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url("../#{$path-images}/background-extension.jpg");
+    background-size: 100%, 100%;
+    .screen {
+        width: 100%;
+        margin: 0rem 2rem;
+        aspect-ratio: 16/9;
+        max-width: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("../#{$path-images}/retratos_de_familia.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: ease-in-out showBg $showBgTimeout;
+        svg {
+            transform: scale(2);
+            @include media-breakpoint-down(sm) {
+                transform: scale(1);
+            }
+            opacity: 0;
+            animation: ease-in-out hideAll $svgHideTimeout;
+            path {
+                fill: $white;
+            }
+            path:nth-child(1) {
+              animation: ease-in-out Path1 $pathTimeout;
+            }
+            path:nth-child(2) {
+              animation: ease-in-out Path2 $pathTimeout;
+            }
+            path:nth-child(3) {
+              animation: ease-in-out Path3 $pathTimeout;
+            }
+            path:nth-child(4) {
+              animation: ease-in-out Path4 $pathTimeout;
+            }
+            path:nth-child(5) {
+              animation: ease-in-out Path5 $pathTimeout;
+            }
+            path:nth-child(6) {
+              animation: ease-in-out Path6 $pathTimeout;
+            }
+            path:nth-child(7) {
+              animation: ease-in-out Path7 $pathTimeout;
+            }
+            path:nth-child(8) {
+              animation: ease-in-out Path8 $pathTimeout;
+            }
+            path:nth-child(9) {
+              animation: ease-in-out Path9 $pathTimeout;
+            }
+            path:nth-child(10) {
+              animation: ease-in-out Path10 $pathTimeout;
+            }
+            path:nth-child(11) {
+              animation: ease-in-out Path11 $pathTimeout;
+            }
+            path:nth-child(12) {
+              animation: ease-in-out Path12 $pathTimeout;
+            }
+            path:nth-child(13) {
+              animation: ease-in-out Path13 $pathTimeout;
+            }
+            path:nth-child(14) {
+              animation: ease-in-out Path8 $pathTimeout;
+            }
+          }
+    }
+}

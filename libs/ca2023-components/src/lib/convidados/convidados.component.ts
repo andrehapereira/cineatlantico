@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EventCardComponent, LoadingIndicatorComponent, PageContainerComponent, PageHeadingComponent } from '@cineatlantico/shared';
+import { staggerChildrenTag } from '@cineatlantico/animations';
 
 @Component({
   selector: 'cineatlantico-convidados',
   standalone: true,
   imports: [CommonModule, EventCardComponent, PageHeadingComponent, PageContainerComponent, LoadingIndicatorComponent],
   templateUrl: './convidados.component.html',
-  styles: [],
+  animations: [
+    staggerChildrenTag('cineatlantico-event-card', 'translateY(50%)')
+  ],
 })
 export class ConvidadosComponent {
 

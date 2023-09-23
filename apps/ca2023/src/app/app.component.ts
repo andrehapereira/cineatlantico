@@ -1,14 +1,28 @@
-import { Component } from '@angular/core';
+import { animate, query, style, transition, trigger } from '@angular/animations';
+import { CommonModule } from '@angular/common';
+import { Component, HostBinding } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { LoadingIndicatorComponent } from '@cineatlantico/shared';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [CommonModule, RouterModule, LoadingIndicatorComponent],
   selector: 'cineatlantico-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('appInit', [
+      transition(':enter', [
+        query('*', [
+          style({ opacity: 0}),
+          animate('1000ms', style({ opacity: 1}))
+        ], { optional: true })
+      ])
+    ])
+  ]
+
 })
 export class AppComponent {
-  title = 'ca2023';
+  @HostBinding('@appInit') public appInit = true;
+
 }

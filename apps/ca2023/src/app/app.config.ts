@@ -1,4 +1,4 @@
-import { ApplicationConfig } from '@angular/core';
+import { APP_INITIALIZER, ApplicationConfig } from '@angular/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
@@ -27,6 +27,13 @@ export const appConfig: ApplicationConfig = {
     }),
     provideEffects([
       EventsEffects
-    ])
+    ]),
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => () => new Promise((resolve, _) => {
+        setTimeout(() => { resolve(true)}, 5000)
+      }),
+      multi: true
+    }
 ],
 };
