@@ -14,7 +14,7 @@ html {
     overflow-x: hidden;
 }
 body{
-    background-image: url("#{$path-images}/background.jpg"), url("#{$path-images}/background-extension.jpg");
+    // background-image: url("#{$path-images}/background.jpg"), url("#{$path-images}/background-extension.jpg");
     background-size: 100%, 100%;
     background-repeat: no-repeat, repeat;
     background-position: left top, 0 -5px;

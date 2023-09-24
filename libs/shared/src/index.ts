@@ -7,6 +7,7 @@ export * from './lib/components/page-heading/page-heading.component';
 export * from './lib/components/page-container/page-container.component';
 export * from './lib/components/event-card/event-card.component';
 export * from './lib/components/loading-indicator/loading-indicator.component';
+export * from './lib/components/video-background/video-background.component';
 export * from './lib/interfaces/menu';
 export * from './lib/interfaces/app-state';
 export * from './lib/interfaces/events';
