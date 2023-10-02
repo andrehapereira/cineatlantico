@@ -1,15 +1,24 @@
 <cineatlantico-page-container>
     <cineatlantico-page-heading heading="CONVIDADOS"></cineatlantico-page-heading>
-    <div data class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap event-card--squared" @staggerChildren>
-        <cineatlantico-event-card
-            [eventPoster]="poster" 
-            [eventTitle]="title" 
-            [eventDate]="date"
-            [additionalInfo]="info"
-            [IMDBLink]="IMDB"
-            [clickable]="false"
-        >
-        </cineatlantico-event-card>
+    <div data>
+        <ng-container *ngIf="!(loading$ | async); else loading">
+            <div class="w-100 my-sm-5 my-3 three-per-row d-flex flex-wrap event-card--squared" @staggerChildren>
+                <cineatlantico-event-card
+                    *ngFor="let guest of guests$ | async as guests"
+                    [eventPoster]="guest.poster" 
+                    [eventTitle]="guest.title" 
+                    [eventDate]="guest.date"
+                    [producer]="guest.producer"
+                    [cast]="guest.cast"
+                    [additionalInfo]="guest.additionalInformation"
+                    [category]="guest.category"
+                    [highlightLink]="guest.IMDBLink"
+                    [clickable]="false"
+                    [highlightTitle]="'SOBRE'"
+                >
+                </cineatlantico-event-card>
+            </div>
+        </ng-container>
     </div>
 </cineatlantico-page-container>
 

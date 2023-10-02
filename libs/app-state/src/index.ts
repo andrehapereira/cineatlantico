@@ -3,3 +3,7 @@ export * from './lib/events/events.effects';
 export * from './lib/events/events.handlers';
 export * from './lib/events/events.reducer';
 export * from './lib/events/events.selectors';
+export * from './lib/guests/guests.actions';
+export * from './lib/guests/guests.effects';
+export * from './lib/guests/guests.reducer';
+export * from './lib/guests/guests.selectors';

@@ -1,7 +1,7 @@
 import { Injectable, inject } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { ALREADY_EXISTS, GET_EVENTS, GET_EVENTS_FAIL, GET_EVENTS_SUCCESS, GET_EVENT_BY_ID, GET_EVENT_BY_ID_SUCCESS } from "./events.actions";
-import { catchError, combineLatest, concatMap, exhaustMap, from, map, mergeAll, of, switchMap, withLatestFrom } from "rxjs";
+import { catchError, combineLatest, concatMap, map, of, switchMap, withLatestFrom } from "rxjs";
 import { Store } from "@ngrx/store";
 import { EventsService } from '@cineatlantico/ca2023-components'
 import { EventItem, Events } from "@cineatlantico/shared";

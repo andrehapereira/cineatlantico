@@ -11,3 +11,4 @@ export * from './lib/components/video-background/video-background.component';
 export * from './lib/interfaces/menu';
 export * from './lib/interfaces/app-state';
 export * from './lib/interfaces/events';
+export * from './lib/interfaces/guests';

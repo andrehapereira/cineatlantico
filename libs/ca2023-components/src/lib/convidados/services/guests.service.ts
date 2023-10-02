@@ -1,25 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { EventItem } from '@cineatlantico/shared';
+import { GuestItem } from '@cineatlantico/shared';
 import { v4 as generateId } from 'uuid';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EventsService {
+export class GuestsService {
 
   private http = inject(HttpClient);
 
-  getEvents() {
-    return this.http.get<string[]>('assets/data/events.json', {
+  getGuests() {
+    return this.http.get<string[]>('assets/data/guests/guests.json', {
       params: {
         id: generateId()
       }
     });
   }
 
-  getEvent(id: string) {
-    return this.http.get<EventItem>(`assets/data/${id}.json`, {
+  getGuest(id: string) {
+    return this.http.get<GuestItem>(`assets/data/guests/${id}.json`, {
       params: {
         id: generateId()
       }

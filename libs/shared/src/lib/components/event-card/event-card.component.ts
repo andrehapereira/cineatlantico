@@ -52,7 +52,7 @@ export class EventCardComponent {
   @Input({
     required: false
   })
-  IMDBLink: string | undefined = '';
+  highlightLink: string | undefined = '';
 
   @Input({
     required: false
@@ -61,6 +61,9 @@ export class EventCardComponent {
 
   @Input({ required: false})
   clickable = true;
+
+  @Input({ required: false})
+  highlightTitle = 'IMDB';
 
   navigateToCardDetails() {
     if (typeof this.route === 'string') {

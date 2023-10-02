@@ -10,7 +10,7 @@ import { menuConfig } from './menu.config';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { EventsEffects, eventsReducer } from '@cineatlantico/app-state';
+import { EventsEffects, GuestsEffects, eventsReducer, guestsReducer } from '@cineatlantico/app-state';
 import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
@@ -23,10 +23,12 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideHttpClient(),
     provideStore({
-      [Features.EVENTS]: eventsReducer
+      [Features.EVENTS]: eventsReducer,
+      [Features.GUESTS]: guestsReducer
     }),
     provideEffects([
-      EventsEffects
+      EventsEffects,
+      GuestsEffects
     ]),
     {
       provide: APP_INITIALIZER,

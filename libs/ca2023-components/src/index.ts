@@ -5,3 +5,4 @@ export * from './lib/a-mostra/a-mostra.component';
 export * from './lib/convidados/convidados.component';
 export * from './lib/edicoes-anteriores/edicoes-anteriores.component';
 export * from './lib/programa/services/events.service';
+export * from './lib/convidados/services/guests.service';

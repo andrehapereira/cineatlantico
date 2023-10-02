@@ -7,6 +7,9 @@ export interface EventsState {
     events: Events
 }
 
+export type GuestsState = EventsState;
+
 export enum Features {
-    EVENTS = 'events'
+    EVENTS = 'events',
+    GUESTS = 'guests'
 }
